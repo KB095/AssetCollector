@@ -21,12 +21,12 @@
     border-radius: 10px;
     margin: 0;
     padding: 2rem 1rem;
+    box-shadow: 1px 5px 10px rgba(0,0,0,0.2);
     background-color: inherit;
     transition: all 0.5s ease-in-out;
     align-items: center;
     display: flex;
     user-select: none;
-    box-shadow: 1px 5px 10px rgba(0,0,0,0.2);
 }
 .menuIcon-span:hover{
     cursor: pointer;
@@ -50,7 +50,7 @@
     top: 10vh;
     background-color: #56615D;
     min-height: 80vh;
-    width: 15vw;
+    width: 13vw;
     transform: translateX(-100%);
     opacity: 0;
     box-shadow: 0px 5px 25px rgba(0,0,0,0.2), 0px 5px 10px rgba(0,0,0,0.5);
@@ -61,9 +61,16 @@
 
     transition: all 0.5s ease-in-out;
 }
+
+@media screen and (max-width: 1200px) {
+    .navigation {
+        width: 170px;
+    }
+  }
+
 .navigation-open {
     transform: translateX(0%);
-    opacity: 1;
+    opacity: .9;
 }
 
 .navigation h1 {
@@ -77,6 +84,8 @@
 .navigation>ul>li:hover {
     color: #0c090D;
     cursor: pointer;
+    margin: 1rem 0.4rem;
+    text-shadow: 10px 10px 25px rgba(0,0,0,0.2);
 }
 
 .links{

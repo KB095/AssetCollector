@@ -11,8 +11,9 @@ const MeetingRoomTest = () => {
     const [participant2, setParticipant2] = useState(null)
     const [time, setTime] = useState(null)
 
-    
+
     const handleSubmit = (e) => {
+
         axios({
             method: 'put',
             url: 'http://192.168.1.101:3001/price-tag/modifyProduct2/',
@@ -20,13 +21,13 @@ const MeetingRoomTest = () => {
               "ID": "123",
               "barcode": "123",
               "number": "123",
-             "placeHolder28": this.state.time,	
-             "placeHolder29": this.state.time !=='' ? "Start Time:" : "",
-             "placeHolder30": this.state.participant1 !=='' ? "Participants:" : "",		
-             "placeHolder32": this.state.participant2,	
-              "placeHolder35": this.state.participant1,
-              "placeHolder36": this.state.guestname,
-             "placeHolder37": this.state.guestname !=='' ? "Welcome:" : "",
+             "placeHolder28": time,	
+             "placeHolder29": time !== null ? "Start Time:" : "",
+             "placeHolder30": participant1 !== null ? "Participants:" : "",		
+             "placeHolder32": participant2,	
+              "placeHolder35": participant1,
+              "placeHolder36": guestname,
+             "placeHolder37": guestname !== null ? "Welcome:" : "",
              "placeHolder38": "Meeting Room",
              "storeUuid": "65"
             } 
@@ -72,7 +73,7 @@ const MeetingRoomTest = () => {
                             <div className="grid-flex">
                                 <h5>Participants:</h5>
                                 <input id="2" type="text" placeholder="Participant" onChange={ e => setParticipant1(e.target.value)}/>
-                                <input type="text" id="4"  placeholder="Participant" onChange={ e => setParticipant2(e.target.value)} />
+                                <input type="text" id="4"  placeholder="Participant" onChange={ e=> setParticipant2(e.target.value)} />
                             </div>
                             <div className='grid-flex'>
                                 <h5>Time:</h5>
@@ -81,7 +82,7 @@ const MeetingRoomTest = () => {
                         </div>
                     </div>
                 </div>
-                <input type="submit" value="Refresh" />
+                <input id="5" type="submit" value="Refresh" />
             </form>
     )
 }
