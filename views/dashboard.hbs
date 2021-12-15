@@ -1,0 +1,31 @@
+<h2>Tárgyi eszköz kép feltöltés</h2>
+<form action="/" method="POST" enctype="multipart/form-data" autocomplete="off" class="pic_upload flex-bg">
+    <div class="flex-bg form_div">
+        <label class="label">QR Kód:</label>
+        <input  required="true" name="code"  type="text" style="width: 30vw; font-size: 2rem; ">
+    </div>
+    <br/>
+    <div class="flex-bg form_div">
+        <label class="label">Hely: </label> <input type="text" accept="image/*" name="place" id="place">
+    </div>
+    <div class="flex-bg form_div">
+        <label class="label">Megjegyzés: </label> <input type="text" accept="image/*" name="note" id="note">
+    </div>
+    <div class="flex-bg form_div">
+        <label class="label" for="first">Első Kép: </label> <input type="file" accept="image/*" name="first" id="first">
+    </div>
+    <div class="flex-bg form_div">
+        <label class="label" for="second">Második Kép: </label> <input type="file" accept="image/*" name="second" id="second">
+    </div>
+    <div class="flex-bg form_div">
+        <label class="label" for="third">Harmadik Kép: </label> <input type="file" accept="image/*" name="third" id="third">
+    </div>
+    <div class="flex-bg form_div">
+        <label class="label" for="fourth">Negyedik Kép: </label> <input type="file" accept="image/*" name="fourth" id="fourth">
+    </div>
+    <div class="flex-bg form_div">
+        <label class="label" for="fifth">Ötödik Kép: </label> <input type="file" accept="image/*" name="fifth" id="fifth">
+    </div>
+
+    <button type="submit" class="btn green darken-3 btn-bg">Mentés</button>
+</form>
